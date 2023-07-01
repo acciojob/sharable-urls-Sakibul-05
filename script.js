@@ -9,5 +9,10 @@ submitBtn.addEventListener("click", (e)=>{
 	if(name.value && year.value){
 		url.innerText += `?${name.name}=${name.value}&${year.name}=${year.value}`
 	}
-	 
+	if(name.value===""){
+		url.innerText += `?${year.name}=${year.value}`
+	}
+	if(year.value===""){
+		url.innerText += `?${name.name}=${name.value}`
+	}
 })
